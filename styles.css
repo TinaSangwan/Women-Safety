@@ -1,0 +1,242 @@
+/* Base styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff8e1; /* Light yellow */
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    background: #ff4081; /* Bright pink */
+    color: white;
+    padding: 1em;
+    text-align: center;
+    position: relative;
+}
+
+header button {
+    background: #fff;
+    color: #ff4081; /* Bright pink */
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    transition: background 0.3s, color 0.3s;
+}
+
+header button:hover {
+    background: #f8bbd0; /* Light pink */
+    color: #ff4081;
+}
+
+main {
+    padding: 1em;
+    max-width: 800px;
+    margin: auto;
+}
+
+section {
+    background: #fff;
+    padding: 1.5em;
+    margin-bottom: 1em;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+textarea {
+    width: calc(100% - 1em);
+    height: 120px;
+    padding: 0.75em;
+    margin-bottom: 1em;
+    border: 2px solid #ff4081; /* Bright pink */
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+button {
+    background-color: #1e88e5; /* Bright blue */
+    color: white;
+    border: none;
+    padding: 0.75em 1.5em;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-right: 0.5em;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #039be5; /* Darker blue */
+}
+
+button#emergencyButton {
+    background-color: #d32f2f; /* Bright red */
+    color: white;
+    position: static;
+    width: 100%;
+    margin-top: 1em;
+}
+
+button#emergencyButton.highlighted {
+    background-color: #e64a19; /* Orange red */
+    color: white;
+}
+
+button#emergencyButton:hover {
+    background-color: #c62828; /* Dark red */
+}
+
+form input {
+    padding: 0.75em;
+    margin-right: 0.5em;
+    border: 2px solid #ff4081; /* Bright pink */
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+form button {
+    padding: 0.75em 1.5em;
+    margin-top: 0.5em;
+    background: #ff4081; /* Bright pink */
+    color: white;
+    border: none;
+}
+
+form button:hover {
+    background: #f50057; /* Deep pink */
+}
+
+select {
+    padding: 0.75em;
+    margin-bottom: 1em;
+    border: 2px solid #ff4081; /* Bright pink */
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #f1f8e9; /* Light green */
+    margin: 0.5em 0;
+    padding: 0.75em;
+    border-radius: 5px;
+    position: relative;
+    font-size: 1em;
+}
+
+li button {
+    background: #ff5722; /* Deep orange */
+    color: white;
+    border: none;
+    padding: 0.5em;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background 0.3s;
+}
+
+li button:hover {
+    background: #f4511e; /* Darker orange */
+}
+
+footer {
+    background: #ff4081; /* Bright pink */
+    color: white;
+    text-align: center;
+    padding: 1em;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+#notification {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: #4caf50; /* Green */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+    transition: opacity 0.5s;
+}
+
+#notification.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.dark-mode {
+    background-color: #222;
+    color: #ddd;
+}
+
+.dark-mode header {
+    background: #444;
+}
+
+.dark-mode section {
+    background: #555;
+}
+
+.dark-mode button {
+    background-color: #4caf50; /* Green */
+}
+
+.dark-mode select, .dark-mode input, .dark-mode textarea {
+    background: #666;
+    color: #ccc;
+    border: 1px solid #888;
+}
+
+/* Safe Space Section */
+#safeSpace {
+    background: #e0f7fa; /* Light cyan */
+    padding: 1.5em;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#safeSpaceMessage {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+    color: #00695c; /* Dark cyan */
+}
+
+#findSafeSpaceButton {
+    background-color: #00acc1; /* Bright cyan */
+    color: white;
+    padding: 0.75em 1.5em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#findSafeSpaceButton:hover {
+    background-color: #0097a7; /* Darker cyan */
+}
+
+#mapContainer {
+    margin-top: 1em;
+}
+
+#alertMessage {
+    font-size: 1.2em; /* Adjust the font size as needed */
+}
+
+#safeSpaceMessage {
+    font-size: 1.5em; /* Adjust the font size as needed */
+}

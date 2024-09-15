@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="A women’s safety alert app designed to send emergency alerts, share location, and manage emergency contacts quickly.">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Women Safety Alert App</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Maps API integration -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbl-QdcG2sHyqxz4Qu_ZE7pjmZNY1KP7I&callback=initMap" async defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Women Safety Alert App</h1>
+        <button id="darkModeToggle">Toggle Dark Mode</button>
+    </header>
+
+    <section id="safetyMessage">
+        <p>
+            Women's safety is an issue that affects individuals, families, and communities around the world. It is essential for women to feel secure, empowered, and prepared to handle potential threats or emergencies. This app is designed to be a vital tool in ensuring that help is just a tap away, providing a reliable method for sending emergency alerts, sharing location in real-time, and managing emergency contacts. In situations where every second counts, the ability to act swiftly can make all the difference. Whether you're commuting, walking alone at night, or in an unfamiliar area, having this app gives you the confidence to navigate the world with an added layer of security. 
+            
+            Additionally, it's important to always trust your instincts. If something feels off or unsafe, it's better to act immediately rather than second-guessing. This app also serves as a reminder to stay vigilant, helping women stay proactive about their safety while offering immediate access to trusted contacts and emergency services. In times of crisis, being prepared can not only protect you but also save lives. Take control of your safety and encourage others to be aware of the resources available to protect themselves.
+        </p>
+    </section>
+    
+    <section id="alert">
+        <h2>Emergency Alert</h2>
+        <textarea id="alertMessage" placeholder="Enter your alert message..."></textarea>
+        <button id="locationButton">Share My Location</button>
+        <button id="voiceAlertButton">Voice Alert</button>
+        <select id="messageTemplates">
+            <option value="">Select Template</option>
+            <option value="Help! I am in danger. Please contact me.">Help! I am in danger. Please contact me.</option>
+            <option value="I need urgent help!">I need urgent help!</option>
+            <option value="Please reach out immediately!">Please reach out immediately!</option>
+        </select>
+        <button id="emergencyButton" class="highlighted">Send Emergency Alert</button>
+    </section>
+
+    <section id="contacts">
+        <h2>Emergency Contacts</h2>
+        <form id="contactForm">
+            <input type="text" id="contactName" placeholder="Contact Name" required>
+            <input type="tel" id="contactNumber" placeholder="Phone Number (10 digits)" pattern="[0-9]{10}" required>
+            <button type="submit">Add Contact</button>
+        </form>
+        <span id="contactMessage"></span> <!-- Confirmation message -->
+        <ul id="contactList"></ul>
+    </section>
+
+    <section id="resources">
+        <h2>Safety Resources</h2>
+        <ul>
+            <li>Women’s Helpline: 181 <button onclick="callNumber('181')">Call</button></li>
+            <li>Police: 112 <button onclick="callNumber('100')">Call</button></li>
+            <li>Ambulance: 102 <button onclick="callNumber('102')">Call</button></li>
+        </ul>
+    </section>
+
+    <section id="alertHistory">
+        <h2>Alert History</h2>
+        <button id="deleteHistory">Delete History</button>
+        <ul id="historyList"></ul>
+    </section>
+
+    <!-- Safe Space Section with Google Map -->
+    <section id="safeSpace">
+        <h2>Safe Space</h2>
+        <p id="safeSpaceMessage">Loading your location on the map...</p>
+        <div id="mapContainer" style="height: 400px; width: 100%;"></div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Women Safety Alert App. All rights reserved.</p>
+    </footer>
+
+    <div id="notification" class="hidden"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+
